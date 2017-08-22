@@ -13,13 +13,13 @@
         <div id="orderTime">
             What size is your hunger, fellow human?
             <form method="post" name="size">
-                <input type="radio" name="piz_size[]" value="Small">Small<br>
+                <input type="radio" name="piz_size[]" id="small" value="Small">Small<br>
                 <input type="radio" name="piz_size[]" value="Medium">Medium<br>
                 <input type="radio" name="piz_size[]" value="Large">Large<br>
                 <input type="radio" name="piz_size[]" value="X-Large">X-Large
             </form>
 
-            What [CRUST] do you want your pizza-substance built on?
+            What [CRUST] do you want for your pizza-substance built on?
             <form method="post" name="crust">
                 <input type="radio" name="crustType[]" value="Hand_Tossed">Hand Tossed<br>
                 <input type="radio" name="crustType[]" value="Thin">Thin<br>
@@ -48,7 +48,8 @@
 
             What other carbon-based lifeforms would you enjoy to intake?
             <form method="post" name="meat">
-                <input type="radio" name="meat1" value="Pepperoni">Pepperoni<br>
+                <input type="radio" name="meat1" id="pepperoni" value="Pepperoni">Pepperoni
+                <label for="pepperoni"><img src="img/pepperoni.jpg" height="35" width="35"></label><br>
                 <input type="radio" name="meat2" value="Beef">Beef<br>
                 <input type="radio" name="meat3" value="Bacon">Bacon<br>
                 <input type="radio" name="meat4" value="Sausage">Sausage<br>
@@ -56,7 +57,7 @@
                 <input type="radio" name="meat6" value="None">None            
             </form>
 
-            VEGGIES?
+            What ground products should be put on your nourishment?
             <form method="post" name="meat">
                 <input type="radio" name="meat1" value="Pepperoni">Pepperoni<br>
                 <input type="radio" name="meat2" value="Beef">Beef<br>
@@ -64,6 +65,12 @@
                 <input type="radio" name="meat4" value="Sausage">Sausage<br>
                 <input type="radio" name="meat5" value="Ham">Ham<br>
                 <input type="radio" name="meat6" value="None">None 
+            </form>
+
+            Is this delivery?
+            <form method="post" name="delivery">
+                <input type="radio" name="choice" value="Yes">Yes<br>
+                <input type="radio" name="choice" value="No" checked="checked">No<br>
             </form>
 
             <form action="/order">
