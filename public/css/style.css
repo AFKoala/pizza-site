@@ -1,0 +1,16 @@
+#head {
+    color: black;
+    background-color: silver;
+    padding: 3px;
+    border: 3px dotted black;
+}
+
+body {
+    background-color: slategray;
+}
+
+#orderTime {
+    background-color: white;
+    padding: 20px;
+    border: 3px dotted black;
+}
