@@ -1,12 +1,20 @@
 <html>
 
     <head>
-        <center><h1>WELCOME TO THE LOCAL FOOD EATERY, FELLOW HUMAN</h1>
+        <center><h1>WELCOME TO THE LOCAL FOOD EATERY</h1>
         <h2>"Made by humans, for humans"</h2></center>
     </head>
 
     <body>
-        What type of crust would you like for your pizza-substance?
+        What size is your hunger, fellow human?
+        <form method="post" name="size">
+            <input type="radio" name="piz_size[]" value="Small">Small<br>
+            <input type="radio" name="piz_size[]" value="Medium">Medium<br>
+            <input type="radio" name="piz_size[]" value="Large">Large<br>
+            <input type="radio" name="piz_size[]" value="X-Large">X-Large
+        </form>
+
+        What [CRUST] do you want your pizza-substance built on?
         <form method="post" name="crust">
             <input type="radio" name="crustType[]" value="Hand_Tossed">Hand Tossed<br>
             <input type="radio" name="crustType[]" value="Thin">Thin<br>
@@ -14,13 +22,47 @@
             <input type="radio" name="crustType[]" value="Stuffed_Crust">Stuffed Crust
         </form>
 
-        What meats would you enjoy to intake?
+        What viscous liquid should cover the [CRUST]?
+        <form method="post" name="sauce">
+            <input type="radio" name="sauces[]" value="Marinara">Marinara<br>
+            <input type="radio" name="sauces[]" value="Pesto">Pesto<br>
+            <input type="radio" name="sauces[]" value="BBQ">BBQ<br>
+            <input type="radio" name="sauces[]" value="Tapenade">Tapenade<br>
+            <input type="radio" name="sauces[]" value="Pumpkin">Pumpkin<br>
+            <input type="radio" name="sauces[]" value="None">None
+        </form>
+
+        What curdled dairy product should be added?
+        <form method="post" name="cheese">
+            <input type="radio" name="cheese1" value="Mozzarella">Mozzarella<br>
+            <input type="radio" name="cheese2" value="Provolone">Provolone<br>
+            <input type="radio" name="cheese3" value="Cheddar">Cheddar<br>
+            <input type="radio" name="cheese4" value="Swiss">Swiss<br>
+            <input type="radio" name="cheese5" value="None">None
+        </form>
+
+        What other carbon-based lifeforms would you enjoy to intake?
         <form method="post" name="meat">
-            <input type="radio" name="meatType[]" value="Pepperoni">Pepperoni<br>
-            <input type="radio" name="meatType[]" value="Beef">Beef<br>
-            <input type="radio" name="meatType[]" value="Bacon">Bacon<br>
-            <input type="radio" name="meatType[]" value="Sausage">Sausage<br>
-            <input type="radio" name="meatType[]" value="Ham">Ham
+            <input type="radio" name="meat1" value="Pepperoni">Pepperoni<br>
+            <input type="radio" name="meat2" value="Beef">Beef<br>
+            <input type="radio" name="meat3" value="Bacon">Bacon<br>
+            <input type="radio" name="meat4" value="Sausage">Sausage<br>
+            <input type="radio" name="meat5" value="Ham">Ham<br>
+            <input type="radio" name="meat6" value="None">None            
+        </form>
+
+        VEGGIES?
+        <form method="post" name="meat">
+            <input type="radio" name="meat1" value="Pepperoni">Pepperoni<br>
+            <input type="radio" name="meat2" value="Beef">Beef<br>
+            <input type="radio" name="meat3" value="Bacon">Bacon<br>
+            <input type="radio" name="meat4" value="Sausage">Sausage<br>
+            <input type="radio" name="meat5" value="Ham">Ham<br>
+            <input type="radio" name="meat6" value="None">None 
+        </form>
+
+        <form action="/order">
+            <input type="submit" value="Place Order">
         </form>
     </body>
 
