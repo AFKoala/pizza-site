@@ -14,3 +14,17 @@ body {
     padding: 20px;
     border: 3px dotted black;
 }
+
+#confirmPage {
+    background-color: white;
+    padding: 20px;
+    border: 3px dotted black;
+}
+
+.span3:focus ~ .alert {
+    display: none;
+}
+
+.span2:focus ~ .alert {
+    display: block;
+}

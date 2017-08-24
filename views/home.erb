@@ -4,77 +4,86 @@
 
     <head>
         <div id="head">
-            <center><h1>WELCOME TO THE LOCAL FOOD EATERY</h1>
-            <h2>"Made by humans, for humans"</h2></center>
+            <center><h1>WELCOME TO THE LOCAL PIZZA EATERY</h1>
+            <h2>"Made by humans, for human consumption."</h2></center>
         </div>
     </head>
 
     <body>
         <div id="orderTime">
-            What size is your hunger, fellow human?
-            <form method="post" name="size">
-                <input type="radio" name="piz_size[]" id="small" value="Small">Small<br>
-                <input type="radio" name="piz_size[]" value="Medium">Medium<br>
-                <input type="radio" name="piz_size[]" value="Large">Large<br>
-                <input type="radio" name="piz_size[]" value="X-Large">X-Large
-            </form>
+            <form method="post" action="/order">
+                <h3>What size is your hunger, fellow human?</h3><br>
+                    <input type="radio" name="pizSize[]" value="Small">Small<br>
+                    <input type="radio" name="pizSize[]" value="Medium">Medium<br>
+                    <input type="radio" name="pizSize[]" value="Large">Large<br>
+                    <input type="radio" name="pizSize[]" value="X-Large">X-Large<br>
 
-            What [CRUST] do you want for your pizza-substance built on?
-            <form method="post" name="crust">
-                <input type="radio" name="crustType[]" value="Hand_Tossed">Hand Tossed<br>
-                <input type="radio" name="crustType[]" value="Thin">Thin<br>
-                <input type="radio" name="crustType[]" value="Pretzel">Pretzel<br>
-                <input type="radio" name="crustType[]" value="Stuffed_Crust">Stuffed Crust
-            </form>
+                <h3>What [CRUST] do you want for your pizza-substance built on?</h3><br>
+                    <input type="radio" name="crustType[]" value="Hand_Tossed">Hand Tossed<br>
+                    <input type="radio" name="crustType[]" value="Thin">Thin<br>
+                    <input type="radio" name="crustType[]" value="Pretzel">Pretzel<br>
+                    <input type="radio" name="crustType[]" value="Stuffed_Crust">Stuffed Crust<br>
 
-            What viscous liquid should cover the [CRUST]?
-            <form method="post" name="sauce">
-                <input type="radio" name="sauces[]" value="Marinara">Marinara<br>
-                <input type="radio" name="sauces[]" value="Pesto">Pesto<br>
-                <input type="radio" name="sauces[]" value="BBQ">BBQ<br>
-                <input type="radio" name="sauces[]" value="Tapenade">Tapenade<br>
-                <input type="radio" name="sauces[]" value="Pumpkin">Pumpkin<br>
-                <input type="radio" name="sauces[]" value="None">None
-            </form>
+                <h3>What viscous liquid should cover the [CRUST]?</h3><br>
+                    <input type="radio" name="sauces[]" id="mari" value="Marinara">Marinara
+                        <label for="mari"><img src="img/marinara.jpg" height="35" width="35"></label><br>
+                    <input type="radio" name="sauces[]" id="pest" value="Pesto">Pesto
+                        <label for="pest"><img src="img/pesto.jpg" height="35" width="35"></label><br>
+                    <input type="radio" name="sauces[]" id="bbq" value="BBQ">BBQ
+                        <label for="bbq"><img src="img/bbq.jpeg" height="35" width="35"></label><br>
+                    <input type="radio" name="sauces[]" id="tape" value="Tapenade">Tapenade
+                        <label for="tape"><img src="img/tapenade.jpg" height="35" width="35"></label><br>
+                    <input type="radio" name="sauces[]" id="pump" value="Pumpkin">Pumpkin
+                        <label for="pump"><img src="img/pumpkin.jpg" height="35" width="35"></label><br>
+                    <input type="radio" name="sauces[]" id="none4" value="None">None
+                        <label for="none4"><img src="img/none.png" height="25" width="25"></label><br>
 
-            What curdled dairy product should be added?
-            <form method="post" name="cheese">
-                <input type="radio" name="cheese1" value="Mozzarella">Mozzarella<br>
-                <input type="radio" name="cheese2" value="Provolone">Provolone<br>
-                <input type="radio" name="cheese3" value="Cheddar">Cheddar<br>
-                <input type="radio" name="cheese4" value="Swiss">Swiss<br>
-                <input type="radio" name="cheese5" value="None">None
-            </form>
+                <h3>What curdled dairy product should be added? (Check as many as you want)</h3><br>
+                    <input type="checkbox" name="cheese[]" id="mozz" value="Mozzarella">Mozzarella
+                        <label for="mozz"><img src="img/mozza_cheese.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="cheese[]" id="prov" value="Provolone">Provolone
+                        <label for="prov"><img src="img/provolone.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="cheese[]" id="ched" value="Cheddar">Cheddar
+                        <label for="ched"><img src="img/cheddar.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="cheese[]" id="swiss" value="Swiss">Swiss
+                        <label for="swiss"><img src="img/swiss.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="cheese[]" id="none3" value="None">None
+                        <label for="none3"><img src="img/none.png" height="25" width="25"></label><br>
 
-            What other carbon-based lifeforms would you enjoy to intake?
-            <form method="post" name="meat">
-                <input type="radio" name="meat1" id="pepperoni" value="Pepperoni">Pepperoni
-                <label for="pepperoni"><img src="img/pepperoni.jpg" height="35" width="35"></label><br>
-                <input type="radio" name="meat2" value="Beef">Beef<br>
-                <input type="radio" name="meat3" value="Bacon">Bacon<br>
-                <input type="radio" name="meat4" value="Sausage">Sausage<br>
-                <input type="radio" name="meat5" value="Ham">Ham<br>
-                <input type="radio" name="meat6" value="None">None            
-            </form>
+                <h3>What other carbon-based lifeforms would you enjoy to intake? (Check as many as you want)</h3><br>
+                    <input type="checkbox" name="meat[]" id="pepperoni" value="Pepperoni">Pepperoni 
+                        <label for="pepperoni"><img src="img/pepperoni.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="meat[]" id="beef" value="Beef">Beef 
+                        <label for="beef"><img src="img/beef.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="meat[]" id="bacon" value="Bacon">Bacon 
+                        <label for="bacon"><img src="img/bacon.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="meat[]" id="sausage" value="Sausage">Sausage
+                        <label for="sausage"><img src="img/sausage.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="meat[]" id="ham" value="Ham">Ham
+                        <label for="ham"><img src="img/ham.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="meat[]" id="none" value="None">None
+                        <label for="none"><img src="img/none.png" height="25" width="25"></label><br>          
 
-            What ground products should be put on your nourishment?
-            <form method="post" name="meat">
-                <input type="radio" name="meat1" value="Pepperoni">Pepperoni<br>
-                <input type="radio" name="meat2" value="Beef">Beef<br>
-                <input type="radio" name="meat3" value="Bacon">Bacon<br>
-                <input type="radio" name="meat4" value="Sausage">Sausage<br>
-                <input type="radio" name="meat5" value="Ham">Ham<br>
-                <input type="radio" name="meat6" value="None">None 
-            </form>
+                <h3>What ground products should be put on your nourishment? (Check as many as you want)</h3><br>
+                    <input type="checkbox" name="veg[]" id="onion" value="Onions">Onions
+                        <label for="onion"><img src="img/onions.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="veg[]" id="shroom" value="Mushrooms">Mushrooms
+                        <label for="shroom"><img src="img/shrooms.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="veg[]" id="spin" value="Spinach">Spinach
+                        <label for="spin"><img src="img/spinach.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="veg[]" id="pep" value="Peppers">Peppers
+                        <label for="pep"><img src="img/peppers.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="veg[]" id="olive" value="Olives">Olives
+                        <label for="olive"><img src="img/olives.jpg" height="35" width="35"></label><br>
+                    <input type="checkbox" name="veg[]" id="none2" value="None">None
+                        <label for="none2"><img src="img/none.png" height="25" width="25"></label><br>
 
-            Is this delivery?
-            <form method="post" name="delivery">
-                <input type="radio" name="choice" value="Yes">Yes<br>
-                <input type="radio" name="choice" value="No" checked="checked">No<br>
-            </form>
+                <h3>Is this delivery?</h3><br>
+                    <input type="radio" name="deliver" value="Yes">Yes<br>
+                    <input type="radio" name="deliver" value="No" checked="checked">No<br>
+                    <p>Address: <input type="post" name="address"></p>
 
-            <form action="/order">
-                <center><input type="submit" value="Place Order"></center>
+                    <center><input type="submit" value="Place Order"></center>
             </form>
         </div>
     </body>
