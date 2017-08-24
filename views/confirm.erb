@@ -11,7 +11,7 @@
                 <%if sauces == "Marinara"%>
                     <img src="img/marinara.jpg" height="35" width="35">
                 <%elsif sauces == "Pesto"%>
-                    <%=image_path 'img/pesto.jpg'%>
+                    <img src="img/pesto.jpg" alt="/PESTO/" height="35" width="35">
                 <%elsif sauces == "BBQ"%>
                     <img src="img/bbq.jpeg" height="35" width="35">
                 <%elsif sauces == "Tapenade"%>
@@ -31,7 +31,7 @@
                 <label for="pepperoni"><img src="img/pepperoni.jpg" height="35" width="35"></label>
                 <label for="beef"><img src="img/beef.jpg" height="35" width="35"></label>
                 <label for="bacon"><img src="img/bacon.jpg" height="35" width="35"></label>
-                <label for="sausage"><img src="img/sausage.jpg" height="35" width="35"></label>
+                <label for="sausage"><img src="img/sausage.jpg" alt="/SAUSAGE/"height="35" width="35"></label>
                 <label for="ham"><img src="img/ham.jpg" height="35" width="35"></label>
             <%end%>
             <%veg.each do |value|%>
@@ -46,4 +46,3 @@
     </div>
 
 </html>
-
