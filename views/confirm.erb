@@ -11,7 +11,7 @@
                 <%if sauces == "Marinara"%>
                     <img src="img/marinara.jpg" height="35" width="35">
                 <%elsif sauces == "Pesto"%>
-                    <img src="img/pesto.jpg" height="35" width="35">
+                    <%=image_path 'img/pesto.jpg'%>
                 <%elsif sauces == "BBQ"%>
                     <img src="img/bbq.jpeg" height="35" width="35">
                 <%elsif sauces == "Tapenade"%>
@@ -46,3 +46,4 @@
     </div>
 
 </html>
+
