@@ -5,9 +5,9 @@
     <div id="confirmPage">
         <p>Check options to confirm.</p>
         <form method="post" action='/confirm'>
-            <p><input type="checkbox" name="confirmed[]" value="<%=pizSize%>"><%=pizSize.join%></p>
-            <p><input type="checkbox" name="confirmed[]" value="<%=crustType%>"><%=crustType.join%> Crust</p>
-            <p><input type="checkbox" name="confirmed[]" value="<%=sauces%>"><%=sauces.join%> Sauce</p>
+            <p><input type="checkbox" name="confirmed_size[]" value="<%=pizSize%>"><%=pizSize.join%></p>
+            <p><input type="checkbox" name="confirmed_crust[]" value="<%=crustType%>"><%=crustType.join%> Crust</p>
+            <p><input type="checkbox" name="confirmed_sauce[]" value="<%=sauces%>"><%=sauces.join%> Sauce</p>
                 <%if sauces == "Marinara"%>
                     <img src="img/marinara.jpg" height="35" width="35">
                 <%elsif sauces == "BBQ"%>
@@ -15,30 +15,32 @@
                 <%elsif sauces == "Tapenade"%>
                     <img src="img/tapenade.jpg" height="35" width="35">
                 <%elsif sauces == "Pumpkin"%>
-                   <img src="img/pumpkin.jpg" height="35" width="35">
+                    <img src="img/pumpkin.jpg" height="35" width="35">
                 <%end%>
             <%cheese.each do |value|%>
-                <p><input type="checkbox" name="confirmed[]" value="<%=value%>"><%=value%> Cheese</p>
+                <p><input type="checkbox" name="confirmed_cheese[]" value="<%=value%>"><%=value%> Cheese</p>
                 <label for="mozz"><img src="img/mozza_cheese.jpg" height="35" width="35"></label>
                 <label for="prov"><img src="img/provolone.jpg" height="35" width="35"></label>
                 <label for="ched"><img src="img/cheddar.jpg" height="35" width="35"></label>
                 <label for="swiss"><img src="img/swiss.jpg" height="35" width="35"></label>
             <%end%>
             <%meat.each do |value|%>
-                <p><input type="checkbox" name="confirmed[]" value="<%=value%>"><%=value%></p>
+                <p><input type="checkbox" name="confirmed_meat[]" value="<%=value%>"><%=value%></p>
                 <label for="pepperoni"><img src="img/pepperoni.jpg" height="35" width="35"></label>
                 <label for="beef"><img src="img/beef.jpg" height="35" width="35"></label>
                 <label for="bacon"><img src="img/bacon.jpg" height="35" width="35"></label>
                 <label for="ham"><img src="img/ham.jpg" height="35" width="35"></label>
             <%end%>
             <%veg.each do |value|%>
-                <p><input type="checkbox" name="confirmed[]" value="<%=value%>"><%=value%></p>
+                <p><input type="checkbox" name="confirmed_veg[]" value="<%=value%>"><%=value%></p>
                 <label for="onion"><img src="img/onions.jpg" height="35" width="35"></label>
                 <label for="shroom"><img src="img/shrooms.jpg" height="35" width="35"></label>
                 <label for="spin"><img src="img/spinach.jpg" height="35" width="35"></label>
                 <label for="pep"><img src="img/peppers.jpg" height="35" width="35"></label>
-                <label for="olive"><img src="img/olives.jpg" height="35" width="35"></label>
-            <%end%>          
+                <label for="olive"><img src="img/olives.jpg" height="35" width="35"></label><br>
+            <%end%> 
+
+            <center><input type="submit" value="These parameters are acceptable. *beep boop*"></center>        
         </form>
     </div>
 

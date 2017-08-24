@@ -28,3 +28,5 @@ body {
 .span2:focus ~ .alert {
     display: block;
 }
+
+/* height="35" width="35"> */
