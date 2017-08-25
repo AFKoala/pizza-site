@@ -17,7 +17,7 @@
             <% end %> 
 
             <% sauces.each do |sauce_value| %>
-                <%if sauce_value == "None"%>
+                <%if sauce_value == "none"%>
                     <p> No Sauce
                     <input type = "radio" name = "confirmed[<%= sauce_value %>]" value = "No Sauce" checked> Yes
                     <input type = "radio" name = "confirmed[<%= sauce_value %>]" value = "no"> No </p>
@@ -30,7 +30,7 @@
             <%end%>
 
             <% cheese.each do |cheese_value| %>
-                <%if cheese_value == "None"%>
+                <%if cheese_value == "none"%>
                     <p> No Cheese
                     <input type = "radio" name = "confirmed[<%= cheese_value %>]" value = "No Cheese" checked> Yes
                     <input type = "radio" name = "confirmed[<%= cheese_value %>]" value = "no"> No </p>
@@ -42,7 +42,7 @@
                 <%end%>
             <% end %> 
             <% meat.each do |meat_value| %>
-                <%if meat_value == "None"%>
+                <%if meat_value == "none"%>
                     <p> No Meat
                     <input type = "radio" name = "confirmed[<%= meat_value %>]" value = "No Meat" checked> Yes
                     <input type = "radio" name = "confirmed[<%= meat_value %>]" value = "no"> No </p>
@@ -54,7 +54,7 @@
                 <%end%>
             <% end %>
             <% veg.each do |veg_value| %>
-                <%if veg_value == "None"%>
+                <%if veg_value == "none"%>
                     <p> No Veggies
                     <input type = "radio" name = "confirmed[<%= veg_value %>]" value = "No Veggies" checked> Yes
                     <input type = "radio" name = "confirmed[<%= veg_value %>]" value = "no"> No </p>
