@@ -14,9 +14,17 @@ post '/order' do
     session[:veg] = params[:veg]
     session[:deliver] = params[:deliver]
     session[:address] = params[:address]
-    redirect '/confirm'
+    redirect '/confirm_correct'
 end
 
-get '/confirm' do
-    erb :confirm, locals: {pizSize: session[:pizSize], crustType: session[:crustType], sauces: session[:sauces], cheese: session[:cheese], meat: session[:meat], veg: session[:veg], deliver: session[:deliver], address: session[:address]}
+get '/confirm_correct' do
+    erb :confirm_correct, locals: {pizSize: session[:pizSize], crustType: session[:crustType], sauces: session[:sauces], cheese: session[:cheese], meat: session[:meat], veg: session[:veg], deliver: session[:deliver], address: session[:address]}
+end
+
+post '/confirm' do
+    redirect '/results'
+end
+
+get '/results' do
+    erb :results
 end

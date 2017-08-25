@@ -1,0 +1,72 @@
+<html>
+    <link rel ="stylesheet" href ="css/style.css">
+
+    <div id="confirmPage">
+        <p><h1>Are these suitable to your human tastebuds?</h1></p>
+        <form method="post" action='/confirm'>
+            <% pizSize.each do |pizSize_value| %>
+                <p> <%= pizSize_value %>
+                <input type = "radio" name = "size_radio[<%= pizSize_value %>]" value = "<%= pizSize_value %>" checked> Yes
+                <input type = "radio" name = "size_radio[<%= pizSize_value %>]" value = "no"> No </p>
+            <% end %> 
+
+            <% crustType.each do |crustType_value| %>
+                <p> <%= crustType_value %>
+                <input type = "radio" name = "crust_radio[<%= crustType_value %>]" value = "<%= crustType_value %>" checked> Yes
+                <input type = "radio" name = "crust_radio[<%= crustType_value %>]" value = "no"> No </p>
+            <% end %> 
+
+            <% sauces.each do |sauce_value| %>
+                <%if sauce_value == "None"%>
+                    <p> No Sauce
+                    <input type = "radio" name = "sauce_radio[<%= sauce_value %>]" value = "No Sauce" checked> Yes
+                    <input type = "radio" name = "sauce_radio[<%= sauce_value %>]" value = "no"> No </p>
+                <%else%>
+                    <p> <%= sauce_value %>
+                    <img src = "img/<%=sauce_value%>.jpg" height="35" width="35">
+                    <input type = "radio" name = "sauce_radio[<%= sauce_value %>]" value = "<%= sauce_value %>" checked> Yes
+                    <input type = "radio" name = "sauce_radio[<%= sauce_value %>]" value = "no"> No </p>
+                <% end %> 
+            <%end%>
+
+            <% cheese.each do |cheese_value| %>
+                <%if cheese_value == "None"%>
+                    <p> No Cheese
+                    <input type = "radio" name = "cheese_radio[<%= cheese_value %>]" value = "No Cheese" checked> Yes
+                    <input type = "radio" name = "cheese_radio[<%= cheese_value %>]" value = "no"> No </p>
+                <%else%>
+                    <p> <%= cheese_value %>
+                    <img src = "img/<%=cheese_value%>.jpg" height="35" width="35">
+                    <input type = "radio" name = "cheese_radio[<%= cheese_value %>]" value = "<%= cheese_value %>" checked> Yes
+                    <input type = "radio" name = "cheese_radio[<%= cheese_value %>]" value = "no"> No </p>
+                <%end%>
+            <% end %> 
+            <% meat.each do |meat_value| %>
+                <%if meat_value == "None"%>
+                    <p> No Meat
+                    <input type = "radio" name = "meat_radio[<%= meat_value %>]" value = "No Meat" checked> Yes
+                    <input type = "radio" name = "meat_radio[<%= meat_value %>]" value = "no"> No </p>
+                <%else%>
+                    <p> <%= meat_value %>
+                    <img src = "img/<%=meat_value%>.jpg" height="35" width="35">
+                    <input type = "radio" name = "meat_radio[<%= meat_value %>]" value = "<%= meat_value %>" checked> Yes
+                    <input type = "radio" name = "meat_radio[<%= meat_value %>]" value = "no"> No </p>
+                <%end%>
+            <% end %>
+            <% veg.each do |veg_value| %>
+                <%if veg_value == "None"%>
+                    <p> No Veggies
+                    <input type = "radio" name = "veg_radio[<%= veg_value %>]" value = "No Veggies" checked> Yes
+                    <input type = "radio" name = "veg_radio[<%= veg_value %>]" value = "no"> No </p>
+                <%else%>
+                    <p> <%= veg_value %>
+                    <img src = "img/<%=veg_value%>.jpg" height="35" width="35">
+                    <input type = "radio" name = "veg_radio[<%= veg_value %>]" value = "<%= veg_value %>" checked> Yes
+                    <input type = "radio" name = "veg_radio[<%= veg_value %>]" value = "no"> No </p>
+                <%end%>
+            <% end %>
+
+            <center><input type="submit" value="These parameters are acceptable. *beep boop*"></center>        
+        </form>
+    </div>
+</html>
