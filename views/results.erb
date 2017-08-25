@@ -2,16 +2,23 @@
 
     <link rel ="stylesheet" href ="css/style.css">
 
+    <%p good%>
     <%p confirmed%>
 
     <div id="confirmPage">
+        <h1>Your pizza:</h1>
+        <%good.each do |key, value|%>
+            <%if key == value%>
+                <p><%=value%></p>
+            <%end%>
+        <%end%>
         <%confirmed.each do |key, value|%>
             <%if key == value%>
-                <%puts value%>
+                <P><%=value%><img src="./img/<%=value%>.jpg" height="25" width="25"></p>
             <%end%>
         <%end%>
 
-        <p>Your SIZE pizza on CRUST crust with SAUCE sauce will have CHEESE cheese, MEAT, and VEG on it, and will be delivered to ADDRESS.
+        <center><h2>Delivering to <%=address%> shortly.</h2></center>
     </div>
 
 </html>

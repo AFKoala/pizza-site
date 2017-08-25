@@ -1,21 +1,19 @@
 <html>
     <link rel ="stylesheet" href ="css/style.css">
 
-    <%pizza = []%>
-
     <div id="confirmPage">
         <p><h1>Are these suitable to your human tastebuds?</h1></p>
         <form method="post" action='/confirm'>
             <% pizSize.each do |pizSize_value| %>
                 <p> <%= pizSize_value %>
-                <input type = "radio" name = "confirmed[<%= pizSize_value %>]" value = "<%= pizSize_value %>" checked> Yes
-                <input type = "radio" name = "confirmed[<%= pizSize_value %>]" value = "no"> No </p>
+                <input type = "radio" name = "good[<%= pizSize_value %>]" value = "<%= pizSize_value %>" checked> Yes
+                <input type = "radio" name = "good[<%= pizSize_value %>]" value = "no"> No </p>
             <% end %> 
 
             <% crustType.each do |crustType_value| %>
                 <p> <%= crustType_value %>
-                <input type = "radio" name = "confirmed[<%= crustType_value %>]" value = "<%= crustType_value %>" checked> Yes
-                <input type = "radio" name = "confirmed[<%= crustType_value %>]" value = "no"> No </p>
+                <input type = "radio" name = "good[<%= crustType_value %>]" value = "<%= crustType_value %>" checked> Yes
+                <input type = "radio" name = "good[<%= crustType_value %>]" value = "no"> No </p>
             <% end %> 
 
             <% sauces.each do |sauce_value| %>

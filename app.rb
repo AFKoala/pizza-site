@@ -23,9 +23,10 @@ end
 
 post '/confirm' do
     session[:confirmed] = params[:confirmed]
+    session[:good] = params[:good]
     redirect '/results'
 end
 
 get '/results' do
-    erb :results, locals: {confirmed: session[:confirmed]}
+    erb :results, locals: {confirmed: session[:confirmed], address: session[:address], good: session[:good]}
 end
