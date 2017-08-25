@@ -2,6 +2,16 @@
 
     <link rel ="stylesheet" href ="css/style.css">
 
-    <center>PLACEHOLDER TEXT</center>
+    <%p confirmed%>
+
+    <div id="confirmPage">
+        <%confirmed.each do |key, value|%>
+            <%if key == value%>
+                <%puts value%>
+            <%end%>
+        <%end%>
+
+        <p>Your SIZE pizza on CRUST crust with SAUCE sauce will have CHEESE cheese, MEAT, and VEG on it, and will be delivered to ADDRESS.
+    </div>
 
 </html>
