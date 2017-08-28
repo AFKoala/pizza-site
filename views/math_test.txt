@@ -1,0 +1,19 @@
+<%price = 0%>
+
+<%if <%value%> == "Small"%>
+   <% price = price + 6%>
+<%elsif <%value%> == "Medium"%>
+   <% price = price + 9%>
+<%elsif <%value%> == "Large"%>
+    <%price = price + 12%>
+<%elsif <%value%> == "price-Large"%>
+    <%price = price + 15%>
+<%end%>
+
+<%(meat/veg).each do |value|%>
+    <%if value == "none"%>
+       <% price = price%>
+    <%else%>
+        <%price = price + 0.35%>
+    <%end%>
+<%end%>

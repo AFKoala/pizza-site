@@ -12,3 +12,22 @@ Finally pass all of the parts to a results page that shows  the final confirmed 
 Please do this without the use of javascript. 
 
 Please get a deployed link in the channel as soon as you get the app layout complete. 
+
+-----------------------------------------------------------------------------------------------------
+
+for homework we want to extend our pizza app to include a price(you can base this on size and toppings) and the option to order multiple pizza’s. 
+
+Your final page will show all pizza’s ordered as well as the final price.  
+
+Feel free to add additional menu items and be creative. 
+
+Please update your deployed links as you  go.
+
+-----------------------------------------------------------------------------------------------------
+
+Small - $6
+Medium - $9
+Large - $12
+X-Large - $15
+
+$0.35 per topping
